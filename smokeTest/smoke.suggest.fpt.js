@@ -1,6 +1,7 @@
 import http from 'k6/http';
 import { describe, expect } from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';
 import { SharedArray } from 'k6/data';
+import { sleep } from 'k6';
 // sample low vus and duration for smoke test
 export const options = {
     vus: 3, 
@@ -22,6 +23,8 @@ export default function () {
     }
 
     describe(`Average-load test scenarios for @FPTshop @suggest API`, () => {
+        http.get(`https://fptshop.com.vn/`)
+        sleep(1)
         const response = http.post(url, body);
         expect(response.status, 'response status').to.equal(200);
         expect(response).to.have.validJsonBody();
