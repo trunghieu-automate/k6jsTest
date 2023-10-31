@@ -22,3 +22,13 @@ This project will demonstrade various type of scenarios of performance testing l
 > Using Chaijs for response assertion while running performance test
 
 > Data reader by `k6/data`
+
+#### $using:
+- with dashboard output
+```cmd
+$ k6 run --config "./configs/spike.config.js" ./scripts/suggest.fpt.js --out dashboard=open
+```
+- without
+```cmd
+$ k6 run --config "./configs/spike.config.js" ./scripts/suggest.fpt.js
+```
