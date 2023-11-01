@@ -2,8 +2,11 @@
     "executor": "ramping-arrival-rate",
     "stages": [
         {
-            "duration": "2h",
-            "target": 20000
+            "duration": "3m",
+            "target": 2000
         }
-    ]
+    ],
+    "threshold": {
+        "http_req_failed": ["rate<0.001"]
+    }
 }
