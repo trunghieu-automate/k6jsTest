@@ -26,9 +26,9 @@ This project will demonstrade various type of scenarios of performance testing l
 #### $using:
 - with dashboard output
 ```cmd
-$ k6 run --config "./configs/spike.config.js" ./scripts/suggest.fpt.js --out dashboard=open
+$ k6 run --config ./configs/spike.config.js ./scripts/suggest.fpt.js --out dashboard=open
 ```
 - without
 ```cmd
-$ k6 run --config "./configs/spike.config.js" ./scripts/suggest.fpt.js
+$ k6 run --config ./configs/spike.config.js ./scripts/suggest.fpt.js
 ```
