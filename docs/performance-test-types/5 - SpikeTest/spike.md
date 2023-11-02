@@ -27,6 +27,20 @@
 
 ## # Results analysis
 - Some metric should be brought into business:
-1. pod speed: this could describe the `pod` (a single processing unit in Kubernates) prcoessing speed
-2. recovery time: 
-3. 
+1. `pod speed`: this could describe the `pod` (a single processing unit in Kubernates) prcoessing speed when entire system encounter a sudden rise of activities.
+2. `recovery time` after the load rush: it describe how long the system recover to the normal perfomance after the sudden load.  
+3. `behaviour of the system`: this metric is the monitoring process entire the system when doing spike test help finding the bottleneck or the weak spot of the system.
+
+#### # k6 run sample:
+- run: 
+```cmd
+$ k6 run --config ./configs/spike.config.json ./scripts/suggest.fpt.js
+```
+- process should be like:
+![Alt text](image.png)
+
+- results:
+![Alt text](image-1.png)
+
+- html report: 
+![Alt text](image-2.png)
