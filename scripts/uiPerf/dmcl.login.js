@@ -5,7 +5,7 @@ export const options = {
 	scenarios: {
 		ui: {
 			executor: 'per-vu-iterations',
-			vus: 10,
+			vus: 1,
 			options: {
 				browser: {
 					type: 'chromium'

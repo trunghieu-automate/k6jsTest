@@ -29,7 +29,7 @@ Detail testcase:
 ## # Consideration
 - k6's browser will run in headless mode implicitly by default, we can change this settings in command line:
 ```zsh
-$ k6 run -e K6_BROWSER_HEADLESS=false ./scripts/uiPerf/*.js  
+$ k6 run -e K6_BROWSER_HEADLESS=false ./scripts/uiPerf/dmcl.login.js  
 ```
 - This is only in experimental, so i discover that there are many thing work not properly between headed and headless mode.
 

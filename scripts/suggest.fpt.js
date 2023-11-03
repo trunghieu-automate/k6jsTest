@@ -1,7 +1,6 @@
 import http from 'k6/http';
 import { describe, expect } from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';
 import { SharedArray } from 'k6/data';
-import { sleep } from 'k6';
 
 // Create a SharedArray object that must be define inside the init script
 const dataList = new SharedArray('suggestItem', () => {
@@ -15,7 +14,7 @@ export default function () {
     //console.info(`Choosing ${randomSearchItem}`);
     const url = `https://fptshop.com.vn/api-data/search/suggest`;
     const body = {
-        keyword : `${randomSuggestItem}`
+        keyword: `${randomSuggestItem}`
     }
 
     describe(`@FPTshop @suggest API`, () => {
